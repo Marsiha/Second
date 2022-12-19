@@ -9,6 +9,7 @@ left.addEventListener('click', ()=>{
 right.addEventListener('click', ()=>{
     cards.scrollLeft += 150;
 })
+var total_cost = 0;
 
 var photo = document.getElementById('ava');
 var title = document.getElementById('im');
@@ -32,3 +33,8 @@ Array.from(document.getElementsByClassName('card')).forEach((ele,i)=>{
         cost.innerText = ele.getElementsByTagName('h4')[0].innerText;
     })
 })
+
+function addOrder(){
+    total_cost+=parseInt(cost.innerText.substring(1,cost.innerText.length));
+    console.log(total_cost);
+}
