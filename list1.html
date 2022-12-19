@@ -43,10 +43,11 @@
     </div>
     <div class="table">
         <h4>Table Reservation</h4>
-        <input class="inp" type="text" name = "name" placeholder="Your name">
-        <input class="inp" type="email" name = "email" placeholder="Your Email Address">
-        <input  class="inp"type="text" name = "phone" placeholder="Phone Number">
-        <select class="inp">
+        <form onsubmit="sign()">
+        <input class="inp" type="text" name = "name" id="name" placeholder="Your name">
+        <input class="inp" type="email" name = "email" id="email" placeholder="Your Email Address">
+        <input  class="inp" type="text" name = "phone" id="phone" placeholder="Phone Number">
+        <select class="inp" id="number" >
             <option>Number Of Guests</option>
             <option>1</option>
             <option>2</option>
@@ -61,15 +62,16 @@
             <option>11</option>
             <option>12</option>
         </select>
-             <input class="inp" type="date" name ="date" placeholder="dd/mm/yyyy">
-                <select class="inp">
+             <input class="inp" type="date" name ="date" id="date" placeholder="dd/mm/yyyy">
+                <select class="inp" id="time" >
                     <option>Time</option>
                     <option>Breakfast</option>
                     <option>Lunch</option>
                     <option>Dinner</option>
                 </select>
-                <textarea placeholder="Message" name = "message"></textarea>
+                <textarea placeholder="Message" id="message" name="w3review"></textarea>
         <input type="submit" name = "submit" value="Make A Reservation">
+        </form>
         </div>
     </div>
 </div>
@@ -96,5 +98,29 @@
     <p style="font-size: 18px; color: white; margin-left: 40px; text-align: center">© 2022 All Rights Reserved By Free Html Templates <br>© Distributed By ThemeWagon</p>
 </div>
 <script src="add.js"></script>
+<script>
+    function sign(){
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var number = document.getElementById('number').value;
+        var date = document.getElementById('date').value;
+        var time = document.getElementById('time').value;
+        var message = document.getElementById('message').value;
+
+        var sign = {
+            name: name,
+            email: email,
+            phone: phone,
+            number: number,
+            date: date,
+            time: time,
+            message: message
+        };
+        var json = JSON.stringify(sign);
+        localStorage.setItem(sign,json);
+        console.log("class")
+    }
+</script>
 </body>
 </html>
