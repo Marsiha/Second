@@ -361,6 +361,10 @@ div div div button{
 }
 
 @media screen and (max-width: 900px){
+    .back img{
+        margin-top: 60px;
+        height: 190px;
+    }
     .qw {
         flex-wrap: wrap;
         padding: 10px;
