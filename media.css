@@ -163,6 +163,17 @@
     }
 }
 @media screen and (max-width: 400px){
+    .middle .michlen{
+        text-align: center;
+        display:block;
+    }
+    .middle .rating{
+        display: block;
+        text-align: center;
+    }
+    .middle .rating img{
+        margin: 0;
+    }
     .qw {
         flex-wrap: wrap;
         padding: 10px;
