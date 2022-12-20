@@ -241,6 +241,10 @@ header .content .content-left .content-left-inner .btn-res a:hover{
     align-items: center;
     justify-content: space-between;
     overflow: auto;
+    padding-bottom: 10px;
+}
+.gallery::-webkit-scrollbar{
+    display: none;
 }
 .gallery img{
     width: 300px;
