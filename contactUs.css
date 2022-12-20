@@ -27,7 +27,8 @@ body{
     /*background-color: gold;*/
     opacity: 0;
     transform: translateY(20px);
-    margin: 50px 70px 50px 150px
+    margin: 50px 70px 50px 150px;
+    /* text-align: center; */
 }
 .andrey{
     display: inline-flex;
