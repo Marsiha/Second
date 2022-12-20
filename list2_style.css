@@ -101,13 +101,18 @@ header nav i{
     border-radius: 10px;
     padding: 1%;
 }
+#orders::-webkit-scrollbar{
+    display: none;
+}
 #orders{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     font-size: 30px;
     font-weight: 500;
     width: 100%;
     height: 65%;
     overflow: auto;
-    flex-direction: column;
 }
 .tot_cost h1{
     margin-bottom: 3%;

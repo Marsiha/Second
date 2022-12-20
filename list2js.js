@@ -49,8 +49,22 @@ function addOrder(){
         }
     }else {
         let div = document.createElement('div')
-        div.innerHTML = title.innerText;
+        let img = document.createElement('img');
+
+        img.src = photo.src;
+        img.style.width = "60px";
+        img.style.height="60px"
+        img.style.borderRadius = "100%"
+        img.style.marginLeft = "20px"
+        div.appendChild(img)
+
+
         document.getElementById('orders').appendChild(div)
+        let divv = document.createElement('div')
+        divv.innerHTML = title.innerText
+        document.getElementById('orders').appendChild(divv)
+
+
     }
     check++;
 }
